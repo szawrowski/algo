@@ -8,16 +8,16 @@
 
 #include <type_traits>
 
-namespace algo {
+namespace szawrowski {
 
 template <typename, typename = std::void_t<>>
-struct HasEqualityOperator : std::false_type {};
+struct has_equality_operator : std::false_type {};
 
 template <typename T>
-struct HasEqualityOperator<
+struct has_equality_operator<
     T, std::void_t<decltype(std::declval<T>() == std::declval<T>())>>
     : std::true_type {};
 
-}  // namespace algo
+}  // namespace szawrowski
 
 #endif  // ALGO_CONSTRAINTS_EQUALITY_OPERATOR_H_

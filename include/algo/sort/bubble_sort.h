@@ -11,9 +11,9 @@
 
 #include "algo/constraints/equality_operator.h"
 
-namespace algo {
+namespace szawrowski {
 
-// BubbleSort function sorts a vector of elements in non-decreasing order using
+// Bubble sort function sorts a vector of elements in non-decreasing order using
 // the bubble sort algorithm.
 //
 // The template parameter T represents the type of elements in the vector.
@@ -28,8 +28,8 @@ namespace algo {
 //
 // Arguments:
 // vec: A reference to the vector to be sorted.
-template <typename T, typename = std::void_t<HasEqualityOperator<T>>>
-void BubbleSort(std::vector<T>& vec) {
+template <typename T, typename = std::void_t<has_equality_operator<T>>>
+void bubble_sort(std::vector<T>& vec) {
   // Iterates over each element in the vector.
   for (size_t i = 0; i < vec.size(); i++) {
     bool is_swapped{};
@@ -50,6 +50,6 @@ void BubbleSort(std::vector<T>& vec) {
   }
 }
 
-}  // namespace algo
+}  // namespace szawrowski
 
 #endif  // ALGO_SORT_BUBBLE_SORT_H_
