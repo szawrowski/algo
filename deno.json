@@ -1,0 +1,66 @@
+{
+  "test": {
+    "include": [
+      "test/"
+    ],
+    "exclude": [
+      "test/test-data/",
+      "src/fixtures/**/*.ts"
+    ]
+  },
+  "lint": {
+    "include": [
+      "src/"
+    ],
+    "exclude": [
+      "test/test-data/",
+      "test/fixtures/**/*.ts",
+      "dist/"
+    ],
+    "rules": {
+      "tags": [
+        "recommended"
+      ],
+      "include": [
+        "ban-untagged-todo"
+      ],
+      "exclude": [
+        "no-unused-vars"
+      ]
+    }
+  },
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 80,
+    "indentWidth": 2,
+    "semiColons": true,
+    "singleQuote": true,
+    "proseWrap": "preserve",
+    "include": [
+      "src/"
+    ],
+    "exclude": [
+      "test/"
+    ]
+  },
+  "lock": false,
+  "nodeModulesDir": "auto",
+  "compilerOptions": {
+    "strict": true
+  },
+  "publish": {
+    "include": [
+      "dist/",
+      "README.md",
+      "deno.json"
+    ]
+  },
+  "tasks": {},
+  "imports": {
+    "@algo/": "./src/",
+    "@std/assert": "jsr:@std/assert@^1.0.0"
+  },
+  "exclude": [
+    "dist/"
+  ]
+}
