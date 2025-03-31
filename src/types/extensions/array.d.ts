@@ -15,7 +15,7 @@ declare global {
      * @throws {Error} If either index is out of bounds.
      * @returns The modified array with the elements swapped.
      */
-    swap(i1: number, i2: number): T[];
+    swapElements(i1: number, i2: number): T[];
   }
 }
 

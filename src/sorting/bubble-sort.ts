@@ -5,7 +5,7 @@
  * @see https://en.wikipedia.org/wiki/Bubble_sort
  */
 
-import '@algo/extensions/array-extensions.ts';
+import '@algo/extensions/array.ts';
 
 /**
  * Sorts an array using the Bubble Sort algorithm.
@@ -25,7 +25,7 @@ export const bubbleSort = <T>(array: T[]): T[] => {
       // Compare adjacent elements and swap if needed
       if (array[j] > array[j + 1]) {
         // Swap elements if they are in the wrong order
-        array.swap(j, j + 1);
+        array.swapElements(j, j + 1);
         swapped = true;
       }
     }
