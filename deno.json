@@ -13,7 +13,7 @@
   },
   "lock": false,
   "tasks": {
-    "test": "deno test",
+    "test": "deno test --parallel",
     "lint": "deno lint",
     "lint:fix": "deno lint --fix"
   },
