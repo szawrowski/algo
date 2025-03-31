@@ -1,5 +1,5 @@
 {
-  "name": "@szawrowski/algo",
+  "name": "@szawrowski/algo-ts",
   "version": "1.0.0",
   "compilerOptions": {
     "strict": true,
